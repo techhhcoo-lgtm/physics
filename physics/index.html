@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vivek Singh Rajput Physics Classes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--brown:#5a2c17;
+--blue:#0d3475;
+--gold:#f7b733;
+--orange:#ff7b54;
+--purple:#6c63ff;
+--cream:#fffaf5;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(
+180deg,
+#fffdf8,
+#fff4eb,
+#f7f3ff,
+#eef5ff
+);
+color:#3b1f12;
+overflow-x:hidden;
+position:relative;
+}
+
+/* PHYSICS DOODLES */
+
+body::before{
+content:
+"F = ma     E = mc²     λ = v/f     V = IR
+
+⚛     ↗F     ↘mg
+
+W = F·s      P = W/t
+
+∫ f(x)dx     d/dx
+
+╱|
+╱ |
+╱__|
+
+→ v
+
+KE = ½mv²
+
+⚡ Ω ⚛ 📐
+
+PV = nRT
+
+sinθ  cosθ  tanθ
+
+x = ut + ½at²
+
+a² + b² = c²";
+    
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+font-size:28px;
+font-weight:700;
+line-height:2.2;
+white-space:pre-wrap;
+opacity:.035;
+color:#0d3475;
+pointer-events:none;
+z-index:-1;
+padding:40px;
+}position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+font-size:28px;
+opacity:.04;
+display:flex;
+justify-content:center;
+align-items:center;
+pointer-events:none;
+transform:rotate(-20deg);
+z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 6%;
+background:rgba(13,52,117,.95);
+backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.logo{
+font-size:28px;
+font-family:'Baloo 2';
+font-weight:800;
+color:white;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--gold);
+}
+
+.menu-btn{
+display:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+padding:70px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+position:relative;
+}
+
+.hero-left{
+flex:1;
+min-width:300px;
+}
+
+.hero-left h1{
+font-size:68px;
+line-height:1.05;
+font-family:'Baloo 2';
+color:var(--brown);
+}
+
+.hero-left span{
+background:linear-gradient(
+90deg,
+var(--blue),
+var(--purple)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-left p{
+margin-top:20px;
+font-size:18px;
+line-height:1.9;
+max-width:650px;
+}
+
+.offer{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+border-radius:40px;
+background:linear-gradient(
+90deg,
+var(--orange),
+var(--gold)
+);
+color:white;
+font-weight:700;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+animation:pulseOffer 2s infinite;
+}
+
+@keyframes pulseOffer{
+50%{
+transform:scale(1.03);
+}
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+margin-right:10px;
+padding:14px 28px;
+border-radius:35px;
+background:linear-gradient(
+90deg,
+var(--blue),
+var(--purple)
+);
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 24px rgba(0,0,0,.2);
+}
+
+.hero-right{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+/* PHYSICS CIRCLE */
+
+.physics-circle{
+width:340px;
+height:340px;
+border-radius:50%;
+background:linear-gradient(
+135deg,
+#0d3475,
+#6c63ff
+);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+border:10px solid white;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+position:relative;
+animation:float 4s ease-in-out infinite;
+}
+
+.physics-circle::before{
+content:"⚛";
+position:absolute;
+top:30px;
+left:50px;
+font-size:35px;
+opacity:.6;
+}
+
+.physics-circle::after{
+content:"⚡";
+position:absolute;
+bottom:35px;
+right:55px;
+font-size:30px;
+opacity:.7;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+.physics-circle h2{
+font-size:48px;
+font-family:'Baloo 2';
+}
+
+.physics-circle p{
+margin-top:8px;
+}
+
+section{
+padding:90px 7%;
+}
+
+.section-title{
+text-align:center;
+font-size:52px;
+font-family:'Baloo 2';
+margin-bottom:55px;
+color:var(--brown);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+padding-top:40px;
+}
+
+.hero-left h1{
+font-size:42px;
+}
+
+.hero-left p{
+font-size:16px;
+}
+
+.physics-circle{
+width:260px;
+height:260px;
+}
+
+.physics-circle h2{
+font-size:38px;
+}
+
+.nav-links{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.section-title{
+font-size:38px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+VSR Physics
+</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#why">Why Us</a>
+<a href="#courses">Courses</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="menu-btn">☰</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+Master <span>Physics</span><br>
+For JEE & NEET
+</h1>
+
+<div class="top-results">
+🏆 Producing Top JEE Advanced Results – AIR 10, AIR 13 & AIR 33 (2024) | AIR 63 & AIR 69 (2025)
+</div>
+
+<p>
+Concept-based Physics coaching designed to help students
+build strong fundamentals, master problem solving and
+achieve excellent ranks in JEE Main, JEE Advanced and NEET.
+</p>
+
+<div class="offer">
+🎉 First 15 Days Free For Class 11 Students
+</div>
+
+<br>
+
+<a class="btn" href="https://t.me/vivek2305singh">
+Join Telegram
+</a>
+
+<a class="btn" href="https://youtube.com/@ncertphysics9504">
+Watch YouTube
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="physics-circle">
+
+<h2>PHYSICS</h2>
+
+<p>Vivek Singh Rajput</p>
+
+<p>JEE & NEET Mentor</p>
+
+<p>Concept • Practice • Success</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+Meet Your Physics Mentor
+</h2>
+
+<div class="teacher">
+
+<div class="teacher-image">
+
+<img src="teacher.jpg" alt="Vivek Singh Rajput">
+
+<div class="orbit orbit1">⚛</div>
+<div class="orbit orbit2">📐</div>
+<div class="orbit orbit3">⚡</div>
+
+</div>
+
+<div class="teacher-content">
+
+<h2>Vivek Singh Rajput</h2>
+
+<p>
+With years of experience mentoring JEE and NEET aspirants,
+Vivek Singh Rajput Sir has helped students transform Physics
+from a difficult subject into their strongest scoring weapon.
+His teaching style focuses on understanding concepts deeply
+instead of memorizing formulas.
+</p>
+
+<p>
+Every chapter is taught through visualisation, real-life
+examples, smart tricks and advanced problem-solving methods
+that help students perform confidently in competitive exams.
+</p>
+
+<div class="mentor-highlights">
+
+<div class="highlight">
+<span>🎯</span>
+<p>Personal Mentorship</p>
+</div>
+
+<div class="highlight">
+<span>📚</span>
+<p>Concept Building</p>
+</div>
+
+<div class="highlight">
+<span>📝</span>
+<p>Daily DPP Practice</p>
+</div>
+
+<div class="highlight">
+<span>🚀</span>
+<p>Rank Improvement Strategy</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.teacher{
+display:flex;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.teacher-image{
+position:relative;
+}
+
+.teacher img{
+width:330px;
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+transition:.5s;
+}
+
+.teacher img:hover{
+transform:scale(1.03);
+}
+
+.orbit{
+position:absolute;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:white;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+animation:floatIcon 4s infinite ease-in-out;
+}
+
+.orbit1{
+top:-20px;
+left:-20px;
+}
+
+.orbit2{
+top:40%;
+right:-25px;
+}
+
+.orbit3{
+bottom:-15px;
+left:30px;
+}
+
+@keyframes floatIcon{
+50%{
+transform:translateY(-12px);
+}
+}
+
+.teacher-content{
+flex:1;
+min-width:280px;
+}
+
+.teacher-content h2{
+font-size:46px;
+font-family:'Baloo 2';
+margin-bottom:20px;
+background:linear-gradient(
+90deg,
+#0d3475,
+#6c63ff
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.teacher-content p{
+line-height:1.9;
+margin-bottom:18px;
+font-size:16px;
+}
+
+.mentor-highlights{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.highlight{
+background:rgba(255,255,255,.7);
+backdrop-filter:blur(10px);
+padding:18px;
+border-radius:18px;
+display:flex;
+align-items:center;
+gap:10px;
+box-shadow:0 10px 20px rgba(0,0,0,.06);
+}
+
+.highlight span{
+font-size:24px;
+}
+
+.highlight p{
+margin:0;
+font-weight:600;
+}
+
+/* WHY CHOOSE US */
+
+.why-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.why-card{
+background:rgba(255,255,255,.7);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:25px;
+transition:.4s;
+box-shadow:0 12px 25px rgba(0,0,0,.08);
+position:relative;
+overflow:hidden;
+}
+
+.why-card::before{
+content:"";
+position:absolute;
+width:150px;
+height:150px;
+background:linear-gradient(
+135deg,
+rgba(108,99,255,.15),
+rgba(247,183,51,.15)
+);
+border-radius:50%;
+top:-50px;
+right:-50px;
+}
+
+.why-card:hover{
+transform:translateY(-10px);
+}
+
+.why-card h3{
+font-size:22px;
+margin-bottom:12px;
+color:#0d3475;
+}
+
+.why-card p{
+line-height:1.8;
+}
+
+</style>
+
+<!-- WHY US -->
+
+<section id="why">
+
+<h2 class="section-title">
+What Makes His Teaching Different?
+</h2>
+
+<div class="why-container">
+
+<div class="why-card">
+<h3>⚛ Concept Based Learning</h3>
+<p>
+Understand Physics from its roots and develop crystal-clear
+fundamentals for every chapter.
+</p>
+</div>
+
+<div class="why-card">
+<h3>📝 Daily DPP Practice</h3>
+<p>
+Carefully designed daily assignments to strengthen concepts
+and improve problem solving.
+</p>
+</div>
+
+<div class="why-card">
+<h3>❓ Doubt Solving Support</h3>
+<p>
+Quick doubt resolution sessions ensuring no concept remains
+unclear.
+</p>
+</div>
+
+<div class="why-card">
+<h3>🎯 Personal Mentorship</h3>
+<p>
+Performance analysis, study planning and exam strategy
+tailored for each student.
+</p>
+</div>
+
+<div class="why-card">
+<h3>📚 Chapter Wise Worksheets</h3>
+<p>
+Extensive practice material covering basic, intermediate and
+advanced questions.
+</p>
+</div>
+
+<div class="why-card">
+<h3>🚀 Revision & Test Series</h3>
+<p>
+Regular mock tests and revision programs to maximize exam
+performance.
+</p>
+</div>
+
+<div class="why-card">
+<h3>📈 Progress Tracking</h3>
+<p>
+Track improvement regularly with test analytics and
+performance reports.
+</p>
+</div>
+
+<div class="why-card">
+<h3>🏆 Competitive Exam Focus</h3>
+<p>
+Special preparation strategy for JEE Main, JEE Advanced and
+NEET examinations.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<h2 class="section-title">
+Courses Offered
+</h2>
+
+<div class="courses-grid">
+
+<div class="course-card">
+
+<div class="course-icon">📘</div>
+
+<h3>Class 11 JEE / NEET</h3>
+
+<p>
+Build strong fundamentals from the beginning with concept-based
+learning, DPPs, worksheets, tests and complete chapter coverage.
+</p>
+
+<ul>
+<li>✔ Complete Theory</li>
+<li>✔ Daily Practice</li>
+<li>✔ Doubt Solving</li>
+<li>✔ Weekly Tests</li>
+</ul>
+
+</div>
+
+<div class="course-card">
+
+<div class="course-icon">📗</div>
+
+<h3>Class 12 JEE / NEET</h3>
+
+<p>
+Board + Competitive preparation together with advanced questions,
+revision strategy and exam-oriented practice.
+</p>
+
+<ul>
+<li>✔ Advanced Problems</li>
+<li>✔ PYQ Discussion</li>
+<li>✔ Test Series</li>
+<li>✔ Mentorship</li>
+</ul>
+
+</div>
+
+<div class="course-card">
+
+<div class="course-icon">🚀</div>
+
+<h3>Dropper Batch</h3>
+
+<p>
+Designed specially for repeaters aiming for top ranks in JEE Main,
+JEE Advanced and NEET.
+</p>
+
+<ul>
+<li>✔ Full Syllabus Revision</li>
+<li>✔ Daily Tests</li>
+<li>✔ Strategy Sessions</li>
+<li>✔ Rank Improvement</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.courses-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.course-card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.course-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:6px;
+background:linear-gradient(
+90deg,
+#0d3475,
+#6c63ff,
+#f7b733,
+#ff7b54
+);
+}
+
+.course-card:hover{
+transform:translateY(-10px);
+}
+
+.course-icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.course-card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#0d3475;
+}
+
+.course-card p{
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.course-card ul{
+list-style:none;
+}
+
+.course-card ul li{
+margin-bottom:10px;
+font-weight:500;
+}
+
+</style>
+
+<!-- VIDEO SECTION -->
+
+<section id="videos">
+
+<h2 class="section-title">
+Latest Physics Lecture
+</h2>
+
+<div class="video-wrapper">
+
+<div class="video-doodle doodle1">⚛</div>
+<div class="video-doodle doodle2">⚡</div>
+<div class="video-doodle doodle3">📐</div>
+
+
+<section id="videos">
+
+<h2>Latest Lecture</h2>
+
+<br>
+
+<div style="text-align:center;">
+
+<a href="https://youtu.be/25FwxjOtZLY" target="_blank">
+
+<img src="https://img.youtube.com/vi/25FwxjOtZLY/hqdefault.jpg"
+style="width:80%; max-width:900px; border-radius:10px;">
+
+</a>
+
+<p>Click the video to watch on YouTube</p>
+
+</div>
+
+</section>
+
+
+<p class="video-text">
+Watch free Physics lectures, exam strategies and concept discussions.
+</p>
+
+</section>
+
+<style>
+
+.video-wrapper{
+max-width:1000px;
+margin:auto;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+position:relative;
+}
+
+.video-doodle{
+position:absolute;
+font-size:40px;
+z-index:10;
+animation:floatDoodle 4s infinite ease-in-out;
+}
+
+.doodle1{
+top:20px;
+left:20px;
+}
+
+.doodle2{
+bottom:20px;
+right:20px;
+}
+
+.doodle3{
+top:20px;
+right:25px;
+}
+
+@keyframes floatDoodle{
+50%{
+transform:translateY(-10px);
+}
+}
+
+.video-text{
+text-align:center;
+margin-top:20px;
+font-size:18px;
+font-weight:500;
+}
+
+</style>
+
+<!-- STUDENT REVIEWS -->
+
+<section id="reviews">
+
+<h2 class="section-title">
+What Students Say
+</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+Physics used to be my weakest subject. After joining Sir's classes,
+I started understanding concepts clearly and solving questions
+confidently.
+</p>
+
+<h4>— JEE Aspirant</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+The DPPs, worksheets and doubt solving sessions helped me improve
+both speed and accuracy in exams.
+</p>
+
+<h4>— NEET Student</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+The best thing is the way concepts are explained through practical
+examples and visualization.
+</p>
+
+<h4>— Class 12 Student</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:linear-gradient(
+135deg,
+rgba(255,255,255,.9),
+rgba(245,245,255,.9)
+);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:25px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+}
+
+.stars{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.review-card p{
+line-height:1.9;
+margin-bottom:15px;
+}
+
+.review-card h4{
+color:#0d3475;
+}
+
+@media(max-width:768px){
+
+iframe{
+height:220px;
+}
+
+.course-card,
+.review-card{
+padding:25px;
+}
+
+.video-text{
+font-size:16px;
+}
+
+}
+
+</style>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<div class="contact-box">
+
+<form>
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+<textarea
+rows="5"
+placeholder="Your Message"></textarea>
+
+<button type="submit">
+Send Message 🚀
+</button>
+
+</form>
+
+<div class="contact-info">
+
+<h3>Get In Touch</h3>
+
+<p>📞 +91 9670050044</p>
+
+<p>📧 Vivekkr.singh89@gmail.com</p>
+
+<p>📚 JEE | NEET Physics Mentorship</p>
+
+<p>🎯 Personal Guidance & Doubt Support</p>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.contact-box{
+background:white;
+border-radius:30px;
+padding:40px;
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:30px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.contact-box input,
+.contact-box textarea{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+background:#f4f7ff;
+border-radius:15px;
+margin-bottom:15px;
+font-size:16px;
+}
+
+.contact-box button{
+padding:15px 35px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+background:linear-gradient(
+90deg,
+#0d3475,
+#6c63ff
+);
+color:white;
+font-size:16px;
+font-weight:600;
+}
+
+.contact-info{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:15px;
+}
+
+.contact-info h3{
+font-size:30px;
+color:#0d3475;
+margin-bottom:10px;
+}
+
+.contact-info p{
+font-size:17px;
+}
+
+@media(max-width:768px){
+
+.contact-box{
+grid-template-columns:1fr;
+padding:25px;
+}
+
+}
+
+</style>
+
+<!-- TELEGRAM CTA -->
+
+<section>
+
+<div class="telegram-box">
+
+<div class="telegram-doodle">⚛</div>
+<div class="telegram-doodle2">⚡</div>
+
+<h2>
+Join Our Physics Community
+</h2>
+
+<p>
+Get DPPs, Notes, Updates, Important Questions,
+Exam Strategies and Physics Discussions directly on Telegram.
+</p>
+
+<a href="https://t.me/vivek2305singh" class="telegram-btn">
+Join Telegram
+</a>
+
+</div>
+
+</section>
+
+<style>
+
+.telegram-box{
+position:relative;
+overflow:hidden;
+background:linear-gradient(
+135deg,
+#0d3475,
+#6c63ff,
+#5a2c17
+);
+padding:70px 30px;
+border-radius:35px;
+text-align:center;
+color:white;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.telegram-box h2{
+font-size:50px;
+font-family:'Baloo 2';
+margin-bottom:15px;
+}
+
+.telegram-box p{
+max-width:700px;
+margin:auto;
+line-height:1.9;
+font-size:18px;
+}
+
+.telegram-btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 35px;
+border-radius:40px;
+background:white;
+color:#0d3475;
+font-weight:700;
+text-decoration:none;
+}
+
+.telegram-doodle,
+.telegram-doodle2{
+position:absolute;
+font-size:60px;
+opacity:.2;
+}
+
+.telegram-doodle{
+top:20px;
+left:30px;
+}
+
+.telegram-doodle2{
+bottom:20px;
+right:30px;
+}
+
+@media(max-width:768px){
+
+.telegram-box h2{
+font-size:36px;
+}
+
+.telegram-box p{
+font-size:16px;
+}
+
+}
+
+</style>
+
+<!-- FLOATING PHYSICS DOODLES -->
+
+<div class="physics-float atom">⚛</div>
+<div class="physics-float bolt">⚡</div>
+<div class="physics-float ruler">📐</div>
+<div class="physics-float wave">〰️</div>
+
+<style>
+
+.physics-float{
+position:fixed;
+font-size:35px;
+opacity:.12;
+pointer-events:none;
+z-index:-1;
+animation:floatPhysics 8s infinite ease-in-out;
+}
+
+.atom{
+top:15%;
+left:5%;
+}
+
+.bolt{
+top:65%;
+right:6%;
+}
+
+.ruler{
+top:40%;
+right:10%;
+}
+
+.wave{
+bottom:10%;
+left:8%;
+}
+
+@keyframes floatPhysics{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+</style>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+Vivek Singh Rajput Physics Classes
+</h3>
+
+<p>
+Concept Based Learning • JEE • NEET
+</p>
+
+<p>
+Helping Students Build Strong Physics Fundamentals
+</p>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+<style>
+
+footer{
+margin-top:80px;
+background:linear-gradient(
+90deg,
+#5a2c17,
+#0d3475,
+#6c63ff
+);
+padding:50px 20px;
+text-align:center;
+color:white;
+}
+
+footer h3{
+font-size:34px;
+font-family:'Baloo 2';
+margin-bottom:10px;
+}
+
+footer p{
+margin-top:10px;
+}
+
+@media(max-width:768px){
+
+footer h3{
+font-size:26px;
+}
+
+}
+
+</style>
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/919670050044"
+class="whatsapp-btn">
+💬
+</a>
+
+<style>
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#25D366;
+color:white;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+animation:whatsappPulse 2s infinite;
+z-index:999;
+}
+
+@keyframes whatsappPulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.12);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+</style>
+
+<!-- MOBILE MENU -->
+
+<script>
+
+const menuBtn=document.querySelector(".menu-btn");
+const navLinks=document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click",()=>{
+
+if(navLinks.style.display==="flex"){
+
+navLinks.style.display="none";
+
+}else{
+
+navLinks.style.display="flex";
+navLinks.style.flexDirection="column";
+navLinks.style.position="absolute";
+navLinks.style.top="70px";
+navLinks.style.right="20px";
+navLinks.style.background="#0d3475";
+navLinks.style.padding="20px";
+navLinks.style.borderRadius="15px";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
